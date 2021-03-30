@@ -2,7 +2,7 @@ import React from "react";
 import { days, icon, months } from "../common/common";
 
 const TempDay = ({isFahrenheit, ...props }) => {
-  const { Day, Night, Temperature, className } = props;
+  const { Day, Temperature, className } = props;
 
   const time = props.Date
   let max = Temperature.Maximum.Value;

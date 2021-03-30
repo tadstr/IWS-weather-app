@@ -181,7 +181,9 @@ img {
 
 body {
   font-family: "Montserrat", sans-serif;
-  background: #f7d9a3;
+  background-image: url(./imgs/background.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
   font-size: 100%;
 }
 a {
@@ -197,7 +199,7 @@ a:hover {
 h1 {
   text-align: center;
   font-size: 3em;
-  color: #3c2f24;
+  color: #fff;
   margin: 2em 0em 1em 0em;
 }
 /*-----*/
@@ -205,10 +207,14 @@ h1 {
   background: #fff;
   width: 80%;
   margin: 0 auto;
+  border-radius: 15px;
+  border: 5px solid aliceblue;
 }
 .widget-top {
   border-bottom: 3px solid #d4d4d4;
   padding: 1.5em;
+  background-color: aliceblue;
+
 }
 .widget-top h2 {
   font-size: 1.2em;
@@ -238,6 +244,7 @@ h1 {
 /*----*/
 .widget-bottom {
   text-align: center;
+  background-color: aliceblue;
 }
 .day {
   float: left;
@@ -287,7 +294,7 @@ h1 {
   padding: 5em 0;
 }
 .copy-right p {
-  color: #000;
+  color: #fff;
   font-size: 1em;
 }
 .copy-right p a {

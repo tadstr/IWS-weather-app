@@ -1,10 +1,19 @@
 import axios from "axios";
 const API_KEY = "0ggA3deRH22GFeYDqjWkoirbAz1tEU1D";
-const IP_ADDRESS = "113.190.104.63";
 
+const getPublicIp = async () => {
+  try {
+    const res = await axios.get("https://api.ipify.org")
+    return res.data
+  } catch (e) {
+    console.log("ERROR", e);
+  }
+
+}
 export const fetchLocation = async () => {
   try {
-    const res = await axios.get(`http://ip-api.com/json/${IP_ADDRESS}`);
+    const ipAddress = await getPublicIp()
+    const res = await axios.get(`http://ip-api.com/json/${ipAddress}`);
     return res.data;
   } catch (e) {
     console.log("ERROR", e);
@@ -13,7 +22,8 @@ export const fetchLocation = async () => {
 
 export const fetchCity = async () => {
   try {
-    const res = await axios.get(`http://ip-api.com/json/${IP_ADDRESS}`);
+    const ipAddress = await getPublicIp()
+    const res = await axios.get(`http://ip-api.com/json/${ipAddress}`);
     const city = res.data.city;
     return city;
   } catch (e) {

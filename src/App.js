@@ -13,34 +13,35 @@ function App() {
   useEffect(() => {
     const getData = async () => {
       try {
-        const data = await getWeatherForecast();
+        const weatherData = await getWeatherForecast();
+        const locationData = await fetchLocation();
+        setWeatherData(weatherData);
+        setLocationData(locationData);
         setIsLoaded(true);
-        setWeatherData(data);
       } catch (err) {
         setIsLoaded(true);
       }
     };
     getData();
+    // getLocation();
+    // const getLocation = async () => {
+    //   try {
+    //     const data = await fetchLocation();
+    //     setIsLoaded(true);
+    //     setLocationData(data);
+    //   } catch (err) {
+    //     setIsLoaded(true);
+    //   }
+    // };
   }, []);
 
-  useEffect(() => {
-    const getLocation = async () => {
-      try {
-        const data = await fetchLocation();
-        setIsLoaded(true);
-        setLocationData(data);
-      } catch (err) {
-        setIsLoaded(true);
-      }
-    };
-    getLocation();
-  }, []);
 
   const handleChange = () => {
     setIsFahrenheit(!isFahrenheit)
   };
 
   return (
+    isLoaded ?
     <>
       <h1>Simple Weather Widget</h1>
       <div className="widget">
@@ -59,12 +60,11 @@ function App() {
           </ul>
           <div className="clear"> </div>
         </div>
-        <div className="widget-bottom">
-          {
-            isLoaded ? weatherData.map(({ id, ...props }) => (
-              <TempDay key={(id = nanoid())} {...props} isFahrenheit={isFahrenheit} className="day" />
-            )) : ""
-          }
+        <div className="widget-bottom">{
+          weatherData.map(({ id, ...props }) => (
+            <TempDay key={(id = nanoid())} {...props} isFahrenheit={isFahrenheit} className="day" />
+          ))
+        }
           <div className="clear"> </div>
         </div>
       </div>
@@ -72,13 +72,13 @@ function App() {
       <div className="copy-right">
         <p>
           © 2019 Simple Weather Widget. All rights reserved | Design by{" "}
-          <a href="http://w3layouts.com/" target="_blank">
+          <a href="http://w3layouts.com/" target="_blank" rel="noopener noreferrer">
             {" "}
             W3layouts{" "}
           </a>
         </p>
       </div>
-    </>
+    </> : <div class="lds-hourglass"></div>
   );
 }
 

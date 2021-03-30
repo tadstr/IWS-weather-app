@@ -52,10 +52,10 @@ function App() {
           </h2>
           <ul>
             <li onClick={handleChange}>
-              <p className={isFahrenheit ? '' : 'cen'}>°F</p>
+              <p className={isFahrenheit ? 'cen' : ''}>°F</p>
             </li>
             <li onClick={handleChange}>
-              <p className={!isFahrenheit ? '' : 'cen'}>°C</p>
+              <p className={!isFahrenheit ? 'cen' : ''}>°C</p>
             </li>
           </ul>
           <div className="clear"> </div>

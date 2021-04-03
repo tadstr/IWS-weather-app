@@ -1,0 +1,15 @@
+/*----*/
+.copy-right {
+  text-align: center;
+  padding: 5em 0;
+}
+.copy-right p {
+  color: #fff;
+  font-size: 1em;
+}
+.copy-right p a {
+  color: #fff;
+}
+.copy-right p a:hover {
+  color: #ddbc27;
+}

@@ -1,0 +1,137 @@
+.widget {
+  background: #ddbc27;
+  width: 85vw;
+  margin: 0 auto;
+  border-radius: 15px;
+  border: 5px solid #ddbc27;
+  height: 390px;
+}
+.widget-top {
+  border-bottom: 2px solid #fff;
+  padding: 1.5em;
+  background-color: #ddbc27;
+}
+.widget-top h2 {
+  font-size: 1.2em;
+  float: left;
+  color: white;
+}
+.widget-top ul {
+  float: right;
+  border: 1px solid white;
+  border-radius: 5px;
+}
+.widget-top li {
+  display: inline-block;
+}
+.widget-top li p {
+  color: white;
+  font-size: 1em;
+  padding: 4px 6px;
+  cursor: pointer;
+}
+.widget-top li p.cen {
+  background: black;
+  border-radius: 6px;
+}
+.whe {
+  vertical-align: bottom;
+  margin-right: 0.5em;
+}
+/*----*/
+.widget-bottom {
+  text-align: center;
+  background-color: #ddbc27;
+}
+
+.lds-hourglass {
+  display: inline-block;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80px;
+  height: 80px;
+}
+.lds-hourglass:after {
+  content: " ";
+  display: block;
+  border-radius: 50%;
+  width: 0;
+  height: 0;
+  margin: 8px;
+  box-sizing: border-box;
+  border: 32px solid #fff;
+  border-color: #fff transparent #fff transparent;
+  animation: lds-hourglass 1.2s infinite;
+}
+.myProfile {
+  padding-top: 10px;
+}
+
+@keyframes lds-hourglass {
+  0% {
+    transform: rotate(0);
+    animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  }
+  50% {
+    transform: rotate(900deg);
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+  100% {
+    transform: rotate(1800deg);
+  }
+}
+
+/*----*/
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2.5em;
+  }
+}
+@media (max-width: 736px) {
+  .day-inner {
+    padding: 2em 1em;
+    border: 1px solid;
+  }
+}
+@media (max-width: 600px) {
+  .copy-right p {
+    font-size: 0.9em;
+    line-height: 1.5em;
+  }
+  h1 {
+    font-size: 2.3em;
+  }
+}
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.6em;
+  }
+  .day-inner h4 {
+    font-size: 0.6em;
+  }
+  .widget {
+    width: 97%;
+  }
+  .date p {
+    font-size: 0.9em;
+  }
+}
+@media (max-width: 320px) {
+  h1 {
+    font-size: 1.4em;
+  }
+  .day-inner h4 {
+    font-size: 0.1em;
+  }
+  .day-inner {
+    padding: 1em 0.3em;
+  }
+  .date p {
+    font-size: 0.7em;
+  }
+  .copy-right {
+    padding: 3em 0;
+  }
+}

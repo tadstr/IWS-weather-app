@@ -48,8 +48,8 @@ export const icon = {
   "Hot": "fas fa-temperature-high",
   "Cold": "fas fa-temperature-low",
   "Windy": "fas fa-wind",
-  "Clear": "far fa-umbrella",
-  "Mostly clear": "far fa-umbrella",
+  "Clear": "fas fa-umbrella",
+  "Mostly clear": "fas fa-umbrella",
   "Partly cloudy": "fas fa-cloud",
   "Intermittent clouds": "fas fa-cloud",
   "Hazy moonlight": "fas fa-moon",
@@ -60,4 +60,5 @@ export const icon = {
   "Mostly cloudy w/ T-Storms": "fas fa-poo-storm",
   "Mostly cloudy w/ Flurries": "fas fa-poo-storm",
   "Mostly cloudy w/ Snow": "far fa-snowflake",
+  "Thunderstorms": "fas fa-bolt"
 };

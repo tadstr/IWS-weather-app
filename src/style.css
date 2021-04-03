@@ -121,13 +121,6 @@ table {
   border-spacing: 0;
 }
 /* start editing from here */
-#root {
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
 
 a {
   text-decoration: none;
@@ -181,11 +174,15 @@ img {
 
 body {
   font-family: "Montserrat", sans-serif;
-  background-image: url(./imgs/background.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
   font-size: 100%;
+   background-color: #000;
+  /* background: url(http://wallpapercave.com/wp/aZlqiAT.png) 50% 50% no-repeat;
+  background-size: cover; */
+  height: 700px;
+  padding: 50px;
+  margin: 0;
 }
+
 a {
   text-decoration: none;
 }
@@ -200,207 +197,6 @@ h1 {
   text-align: center;
   font-size: 3em;
   color: #fff;
-  margin: 2em 0em 1em 0em;
+  margin: 1.5em 0em 1em 0em;
 }
 /*-----*/
-.widget {
-  background: #fff;
-  width: 80%;
-  margin: 0 auto;
-  border-radius: 15px;
-  border: 5px solid aliceblue;
-}
-.widget-top {
-  border-bottom: 3px solid #d4d4d4;
-  padding: 1.5em;
-  background-color: aliceblue;
-
-}
-.widget-top h2 {
-  font-size: 1.2em;
-  float: left;
-}
-.widget-top ul {
-  float: right;
-  border: 1px solid #c1c1c1;
-  border-radius: 5px;
-}
-.widget-top li {
-  display: inline-block;
-}
-.widget-top li p {
-  color: #8c8b8b;
-  font-size: 1em;
-  padding: 4px 6px;
-  cursor: pointer;
-}
-.widget-top li p.cen {
-  background: #e4e4e4;
-}
-.whe {
-  vertical-align: bottom;
-  margin-right: 0.5em;
-}
-/*----*/
-.widget-bottom {
-  text-align: center;
-  background-color: aliceblue;
-}
-.day {
-  float: left;
-  width: 20%;
-}
-.day-inner {
-  padding: 2em;
-}
-.day-even {
-  background: #f1f1f1;
-}
-.day:nth-child(3) {
-  border-right: none;
-}
-.day-inner h4 {
-  color: #8c8b8b;
-  font-size: 1em;
-}
-.day-inner h6 {
-  color: #000;
-  font-size: 1.5em;
-  font-weight: bold;
-  text-align: center;
-  margin-bottom: 1em;
-}
-
-.day-inner h6 span {
-  color: #8c8b8b;
-  margin-right: 15px;
-  font-size: smaller;
-}
-
-.day-inner i {
-  display: block;
-  margin: 0.5em auto;
-  font-size: 2.5em;
-  color: #ddbc27;
-}
-.date p {
-  color: #8c8b8b;
-  font-size: 1em;
-  line-height: 1.4em;
-}
-/*----*/
-.copy-right {
-  text-align: center;
-  padding: 5em 0;
-}
-.copy-right p {
-  color: #fff;
-  font-size: 1em;
-}
-.copy-right p a {
-  color: #fff;
-}
-.copy-right p a:hover {
-  color: #000;
-}
-.lds-hourglass {
-  display: inline-block;
-  position: relative;
-  width: 80px;
-  height: 80px;
-}
-.lds-hourglass:after {
-  content: " ";
-  display: block;
-  border-radius: 50%;
-  width: 0;
-  height: 0;
-  margin: 8px;
-  box-sizing: border-box;
-  border: 32px solid #fff;
-  border-color: #fff transparent #fff transparent;
-  animation: lds-hourglass 1.2s infinite;
-}
-@keyframes lds-hourglass {
-  0% {
-    transform: rotate(0);
-    animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
-  }
-  50% {
-    transform: rotate(900deg);
-    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
-  }
-  100% {
-    transform: rotate(1800deg);
-  }
-}
-
-/*----*/
-@media (max-width: 1366px) {
-  .widget {
-    width: 42%;
-  }
-}
-@media (max-width: 1280px) {
-  .widget {
-    width: 45%;
-  }
-}
-@media (max-width: 1024px) {
-  .widget {
-    width: 56%;
-  }
-}
-@media (max-width: 768px) {
-  .widget {
-    width: 75%;
-  }
-  h1 {
-    font-size: 2.5em;
-  }
-}
-@media (max-width: 736px) {
-  .widget {
-    width: 82%;
-  }
-  .day-inner {
-    padding: 2em 1em;
-  }
-}
-@media (max-width: 600px) {
-  .copy-right p {
-    font-size: 0.9em;
-    line-height: 1.5em;
-  }
-  h1 {
-    font-size: 2.3em;
-  }
-}
-@media (max-width: 480px) {
-  h1 {
-    font-size: 1.6em;
-  }
-  .widget {
-    width: 97%;
-  }
-  .date p {
-    font-size: 0.9em;
-  }
-}
-@media (max-width: 320px) {
-  h1 {
-    font-size: 1.4em;
-  }
-  .day-inner h4 {
-    font-size: 0.9em;
-  }
-  .day-inner {
-    padding: 1em 0.3em;
-  }
-  .date p {
-    font-size: 0.7em;
-  }
-  .copy-right {
-    padding: 3em 0;
-  }
-}

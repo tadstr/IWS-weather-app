@@ -1,4 +1,4 @@
-# Author: Đỗ Nguyễn Hoàng Ân - 4C17
+# Author: Đỗ Nguyễn Hoàng Ân
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
